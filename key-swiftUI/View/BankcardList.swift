@@ -11,7 +11,14 @@ struct BankcardList: View {
     @EnvironmentObject var modelData: ModelData
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                ForEach(modelData.bankcards) { bankcard in
+                    BankcardRow(bankcard: bankcard)
+                }
+            }
+            .navigationTitle("Bankcard")
+        }
     }
 }
 
