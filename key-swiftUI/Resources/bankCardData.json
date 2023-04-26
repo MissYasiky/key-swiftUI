@@ -1,0 +1,29 @@
+[
+    {
+        "bankName": "中国银行",
+        "cardNumber": "123456789010",
+        "isCreditCard": true,
+        "isMyOwn": true,
+        "validThru": 1212,
+        "cvv2": 123,
+        "extraInfo": {}
+    },
+    {
+        "bankName": "汇丰银行",
+        "cardNumber": "123456789011",
+        "isCreditCard": false,
+        "isMyOwn": true,
+        "validThru": 0921,
+        "cvv2": 124,
+        "extraInfo": {}
+    },
+    {
+        "bankName": "华夏银行",
+        "cardNumber": "123456789012",
+        "isCreditCard": false,
+        "isMyOwn": true,
+        "validThru": 0621,
+        "cvv2": 125,
+        "extraInfo": {}
+    }
+]
