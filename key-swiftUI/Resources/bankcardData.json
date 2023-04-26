@@ -1,0 +1,26 @@
+[
+    {
+        "id": "123456789010",
+        "bankName": "中国银行",
+        "isCreditCard": true,
+        "isMyOwn": true,
+        "validThru": "1212",
+        "cvv2": "123"
+    },
+    {
+        "id": "123456789011",
+        "bankName": "汇丰银行",
+        "isCreditCard": false,
+        "isMyOwn": true,
+        "validThru": "0921",
+        "cvv2": "124"
+    },
+    {
+        "id": "123456789013",
+        "bankName": "华夏银行",
+        "isCreditCard": false,
+        "isMyOwn": true,
+        "validThru": "1212",
+        "cvv2": "123"
+    }
+]
