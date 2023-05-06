@@ -13,16 +13,17 @@ struct BankcardRow: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Label(bankcard.bankName, systemImage: "creditcard")
+                Text(bankcard.bankName)
                     .font(.headline)
-                    .foregroundColor(.primary)
                 Spacer()
-                Text(bankcard.id)
-                    .foregroundColor(.secondary)
+                HStack {
+                    Label(bankcard.id, systemImage: "creditcard.and.123")
+                        .font(.caption)
+                    Spacer()
+                    Text(bankcard.cardType)
+                        .font(.caption2)
+                }
             }
-            Spacer()
-            Text(bankcard.isCreditCard ? "信用卡" : "借记卡")
-                .font(.footnote)
         }
         .padding(10)
     }

@@ -16,6 +16,8 @@
 		21D0CC8C29F90BB000FD0F02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21D0CC8B29F90BB000FD0F02 /* Assets.xcassets */; };
 		21D0CC8F29F90BB000FD0F02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21D0CC8E29F90BB000FD0F02 /* Preview Assets.xcassets */; };
 		21D0CC9A29F916E900FD0F02 /* bankcardData.json in Resources */ = {isa = PBXBuildFile; fileRef = 21D0CC9929F916E900FD0F02 /* bankcardData.json */; };
+		21E022AC2A05FED700749DAA /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E022AB2A05FED700749DAA /* TrailingIconLabelStyle.swift */; };
+		21E022B12A05FFF400749DAA /* BankcardDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E022B02A05FFF400749DAA /* BankcardDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		21D0CC8E29F90BB000FD0F02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		21D0CC9929F916E900FD0F02 /* bankcardData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bankcardData.json; sourceTree = "<group>"; };
 		21D0CC9B29F916F200FD0F02 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		21E022AB2A05FED700749DAA /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
+		21E022B02A05FFF400749DAA /* BankcardDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankcardDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 				21D0CC8929F90BAF00FD0F02 /* ContentView.swift */,
 				213973D029F9359F0052F584 /* BankcardList.swift */,
 				213973D229F9600F0052F584 /* BankcardRow.swift */,
+				21E022B02A05FFF400749DAA /* BankcardDetail.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -83,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				21D0CC8729F90BAF00FD0F02 /* key_swiftUIApp.swift */,
+				21E022AF2A05FFCE00749DAA /* Style */,
 				213973CF29F934FB0052F584 /* View */,
 				213973C929F932AE0052F584 /* Model */,
 				21D0CC8B29F90BB000FD0F02 /* Assets.xcassets */,
@@ -106,6 +112,14 @@
 				21D0CC9929F916E900FD0F02 /* bankcardData.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		21E022AF2A05FFCE00749DAA /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				21E022AB2A05FED700749DAA /* TrailingIconLabelStyle.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,12 +193,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21E022B12A05FFF400749DAA /* BankcardDetail.swift in Sources */,
 				213973D329F9600F0052F584 /* BankcardRow.swift in Sources */,
 				21D0CC8A29F90BAF00FD0F02 /* ContentView.swift in Sources */,
 				213973CD29F933EA0052F584 /* ModelData.swift in Sources */,
 				213973D129F9359F0052F584 /* BankcardList.swift in Sources */,
 				213973CB29F932BC0052F584 /* Bankcard.swift in Sources */,
 				21D0CC8829F90BAF00FD0F02 /* key_swiftUIApp.swift in Sources */,
+				21E022AC2A05FED700749DAA /* TrailingIconLabelStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

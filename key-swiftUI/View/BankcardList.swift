@@ -14,10 +14,14 @@ struct BankcardList: View {
         NavigationView {
             List {
                 ForEach(modelData.bankcards) { bankcard in
-                    BankcardRow(bankcard: bankcard)
+                    NavigationLink {
+                        BankcardDetail(bankcard: bankcard)
+                    } label: {
+                        BankcardRow(bankcard: bankcard)
+                    }
                 }
             }
-            .navigationTitle("Bankcard")
+            .navigationTitle("银行卡")
         }
     }
 }

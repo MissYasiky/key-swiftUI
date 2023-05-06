@@ -15,6 +15,14 @@ struct Bankcard: Identifiable, Codable {
     var validThru: String
     var cvv2: String
     
+    var cardType: String {
+        self.isCreditCard ? "信用卡" : "借记卡"
+    }
+    
+    var ownerName: String {
+        self.isMyOwn ? "XieYunJia" : ""
+    }
+    
     init(id: String, bankName: String, isCreditCard: Bool = false, isMyOwn: Bool = true, validThru: String, cvv2: String) {
         self.id = id
         self.bankName = bankName
