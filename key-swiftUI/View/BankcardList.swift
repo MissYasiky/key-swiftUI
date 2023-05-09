@@ -8,17 +8,15 @@
 import SwiftUI
 
 struct BankcardList: View {
-    @EnvironmentObject var modelData: ModelData
+    @Binding var bankcards: [Bankcard]
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(modelData.bankcards) { bankcard in
-                    NavigationLink {
-                        BankcardDetail(bankcard: bankcard)
-                    } label: {
-                        BankcardRow(bankcard: bankcard)
-                    }
+            List($bankcards) { $bankcard in
+                NavigationLink {
+                    BankcardDetail(bankcard: $bankcard)
+                } label: {
+                    BankcardRow(bankcard: bankcard)
                 }
             }
             .navigationTitle("银行卡")
@@ -28,7 +26,6 @@ struct BankcardList: View {
 
 struct BankcardList_Previews: PreviewProvider {
     static var previews: some View {
-        BankcardList()
-            .environmentObject(ModelData())
+        BankcardList(bankcards: .constant(ModelData().bankcards))
     }
 }

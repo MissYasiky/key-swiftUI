@@ -13,8 +13,7 @@ struct key_swiftUIApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(modelData)
+            ContentView(bankcards: $modelData.bankcards)
         }
     }
 }

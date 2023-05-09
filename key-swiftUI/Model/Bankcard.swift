@@ -8,7 +8,7 @@
 import Foundation
 
 struct Bankcard: Identifiable, Codable {
-    let id: String
+    var id: String
     var bankName: String
     var isCreditCard: Bool
     var isMyOwn: Bool
@@ -30,5 +30,11 @@ struct Bankcard: Identifiable, Codable {
         self.isMyOwn = isMyOwn
         self.validThru = validThru
         self.cvv2 = cvv2
+    }
+}
+
+extension Bankcard {
+    static var emptyBankcard: Bankcard {
+        Bankcard(id: "", bankName: "", validThru: "", cvv2: "")
     }
 }
