@@ -9,14 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     @Binding var bankcards: [Bankcard]
+    let saveAction: ()->Void
     
     var body: some View {
-        BankcardList(bankcards: $bankcards)
+        BankcardList(bankcards: $bankcards, saveAction: saveAction)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(bankcards: .constant(ModelData().bankcards))
+        ContentView(bankcards: .constant(SampleData().bankcards), saveAction: {})
     }
 }

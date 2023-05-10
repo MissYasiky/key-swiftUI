@@ -9,7 +9,9 @@ import SwiftUI
 
 struct BankcardList: View {
     @Binding var bankcards: [Bankcard]
+    @Environment(\.scenePhase) private var scenePhase
     @State private var isPresentingNewBankcardView = false
+    let saveAction: ()->Void
     
     var body: some View {
         NavigationView {
@@ -38,12 +40,15 @@ struct BankcardList: View {
             .sheet(isPresented: $isPresentingNewBankcardView) {
                 NewBankcard(bankcards: $bankcards, isPresentingNewBankcardView: $isPresentingNewBankcardView)
             }
+            .onChange(of: scenePhase) { phase in
+                if phase == .inactive { saveAction() }
+            }
         }
     }
 }
 
 struct BankcardList_Previews: PreviewProvider {
     static var previews: some View {
-        BankcardList(bankcards: .constant(ModelData().bankcards))
+        BankcardList(bankcards: .constant(SampleData().bankcards), saveAction: {})
     }
 }

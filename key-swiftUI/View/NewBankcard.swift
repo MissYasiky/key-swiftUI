@@ -34,6 +34,6 @@ struct NewBankcard: View {
 
 struct NewBankcard_Previews: PreviewProvider {
     static var previews: some View {
-        NewBankcard(bankcards: .constant(ModelData().bankcards), isPresentingNewBankcardView: .constant(true))
+        NewBankcard(bankcards: .constant(SampleData().bankcards), isPresentingNewBankcardView: .constant(true))
     }
 }

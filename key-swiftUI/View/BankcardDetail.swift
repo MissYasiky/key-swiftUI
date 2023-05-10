@@ -78,6 +78,6 @@ struct BankcardDetail: View {
 
 struct BankcardDetail_Previews: PreviewProvider {
     static var previews: some View {
-        BankcardDetail(bankcard: .constant(ModelData().bankcards[0]))
+        BankcardDetail(bankcard: .constant(SampleData().bankcards[0]))
     }
 }

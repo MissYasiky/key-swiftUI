@@ -46,6 +46,6 @@ struct BankcardEdit: View {
 
 struct BankcardEdit_Previews: PreviewProvider {
     static var previews: some View {
-        BankcardEdit(bankcard: .constant(ModelData().bankcards[0]))
+        BankcardEdit(bankcard: .constant(SampleData().bankcards[0]))
     }
 }

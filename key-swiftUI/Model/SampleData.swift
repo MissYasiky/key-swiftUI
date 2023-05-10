@@ -8,7 +8,7 @@ Storage for model data.
 import Foundation
 import Combine
 
-final class ModelData: ObservableObject {
+final class SampleData: ObservableObject {
     @Published var bankcards: [Bankcard] = load("bankcardData.json")
 }
 
