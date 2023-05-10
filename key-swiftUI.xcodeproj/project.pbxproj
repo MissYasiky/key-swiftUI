@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210B55872A0A53AF00774BDA /* NewBankcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210B55862A0A53AF00774BDA /* NewBankcard.swift */; };
 		213973CB29F932BC0052F584 /* Bankcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213973CA29F932BC0052F584 /* Bankcard.swift */; };
 		213973CD29F933EA0052F584 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213973CC29F933EA0052F584 /* ModelData.swift */; };
 		213973D129F9359F0052F584 /* BankcardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213973D029F9359F0052F584 /* BankcardList.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		210B55862A0A53AF00774BDA /* NewBankcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBankcard.swift; sourceTree = "<group>"; };
 		213973CA29F932BC0052F584 /* Bankcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bankcard.swift; sourceTree = "<group>"; };
 		213973CC29F933EA0052F584 /* ModelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		213973D029F9359F0052F584 /* BankcardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankcardList.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				21D0CC8929F90BAF00FD0F02 /* ContentView.swift */,
 				213973D029F9359F0052F584 /* BankcardList.swift */,
 				213973D229F9600F0052F584 /* BankcardRow.swift */,
+				210B55862A0A53AF00774BDA /* NewBankcard.swift */,
 				21E022B02A05FFF400749DAA /* BankcardDetail.swift */,
 				21E022B22A06580800749DAA /* BankcardEdit.swift */,
 			);
@@ -190,6 +193,7 @@
 				21D0CC8A29F90BAF00FD0F02 /* ContentView.swift in Sources */,
 				213973CD29F933EA0052F584 /* ModelData.swift in Sources */,
 				213973D129F9359F0052F584 /* BankcardList.swift in Sources */,
+				210B55872A0A53AF00774BDA /* NewBankcard.swift in Sources */,
 				21E022B32A06580800749DAA /* BankcardEdit.swift in Sources */,
 				213973CB29F932BC0052F584 /* Bankcard.swift in Sources */,
 				21D0CC8829F90BAF00FD0F02 /* key_swiftUIApp.swift in Sources */,
