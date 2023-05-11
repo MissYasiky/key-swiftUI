@@ -47,6 +47,18 @@ struct BankcardDetail: View {
                         .foregroundColor(.gray)
                 }
             }
+            if bankcard.extraInfo.count > 0 {
+                Section(header: Text("更多信息")) {
+                    ForEach(Array(bankcard.extraInfo.keys), id: \.self) { key in
+                        HStack {
+                            Text(key)
+                                .frame(width: 100, alignment: .leading)
+                            Divider()
+                            Text(bankcard.extraInfo[key]!)
+                        }
+                    }
+                }
+            }
         }
         .navigationTitle(bankcard.bankName)
         .toolbar {
@@ -69,6 +81,7 @@ struct BankcardDetail: View {
                                 isPresentingEditView = false
                                 bankcard = editingBankcard
                             }
+                            .disabled(editingBankcard.bankName.isEmpty || editingBankcard.id.isEmpty)
                         }
                     }
             }

@@ -26,6 +26,7 @@ struct NewBankcard: View {
                             bankcards.append(newBankcard)
                             isPresentingNewBankcardView = false
                         }
+                        .disabled(newBankcard.bankName.isEmpty || newBankcard.id.isEmpty)
                     }
                 }
         }

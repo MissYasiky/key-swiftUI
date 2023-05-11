@@ -14,6 +14,7 @@ struct Bankcard: Identifiable, Codable {
     var isMyOwn: Bool
     var validThru: String
     var cvv2: String
+    var extraInfo: Dictionary<String, String>
     
     var cardType: String {
         self.isCreditCard ? "信用卡" : "借记卡"
@@ -23,13 +24,14 @@ struct Bankcard: Identifiable, Codable {
         self.isMyOwn ? "XieYunJia" : ""
     }
     
-    init(id: String, bankName: String, isCreditCard: Bool = false, isMyOwn: Bool = true, validThru: String, cvv2: String) {
+    init(id: String, bankName: String, isCreditCard: Bool = false, isMyOwn: Bool = true, validThru: String, cvv2: String, extraInfo: Dictionary<String, String> = [String: String]()) {
         self.id = id
         self.bankName = bankName
         self.isCreditCard = isCreditCard
         self.isMyOwn = isMyOwn
         self.validThru = validThru
         self.cvv2 = cvv2
+        self.extraInfo = extraInfo
     }
 }
 

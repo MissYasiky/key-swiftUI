@@ -9,6 +9,9 @@ import SwiftUI
 
 struct BankcardEdit: View {
     @Binding var bankcard: Bankcard
+    @FocusState private var valueFieldIsFocused: Bool
+    @State private var newKey = ""
+    @State private var newValue = ""
     
     var body: some View {
         List {
@@ -20,6 +23,7 @@ struct BankcardEdit: View {
                 HStack {
                     Label("", systemImage: "creditcard.and.123")
                     TextField("银行卡号", text: $bankcard.id)
+                        .keyboardType(.numberPad)
                 }
                 HStack {
                     Toggle(isOn: $bankcard.isCreditCard) {
@@ -34,10 +38,45 @@ struct BankcardEdit: View {
                 HStack {
                     Label("", systemImage: "clock.badge.checkmark")
                     TextField("有效期", text: $bankcard.validThru)
+                        .keyboardType(.numberPad)
                 }
                 HStack {
                     Label("", systemImage: "key")
                     TextField("cvv2", text: $bankcard.cvv2)
+                        .keyboardType(.numberPad)
+                }
+            }
+            Section(header: Text("更多信息")) {
+                ForEach(Array(bankcard.extraInfo.keys), id: \.self) { key in
+                    HStack {
+                        Text(key)
+                            .frame(width: 100, alignment: .leading)
+                        Divider()
+                        Text(bankcard.extraInfo[key]!)
+                    }
+                    .swipeActions {
+                        Button("删除", role: .destructive) {
+                            bankcard.extraInfo.removeValue(forKey: key)
+                        }
+                    }
+                }
+                HStack {
+                    TextField("自定义标签", text: $newKey)
+                        .frame(width: 100)
+                        .submitLabel(.continue)
+                    Divider()
+                    TextField("信息内容", text: $newValue)
+                        .focused($valueFieldIsFocused)
+                        .submitLabel(.done)
+                    Button(action: {
+                        bankcard.extraInfo[newKey] = newValue
+                        newKey = ""
+                        newValue = ""
+                        valueFieldIsFocused = false
+                    }) {
+                        Image(systemName: "plus.circle.fill")
+                    }
+                    .disabled(newValue.isEmpty || newKey.isEmpty)
                 }
             }
         }
