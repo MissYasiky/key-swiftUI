@@ -5,7 +5,8 @@
         "isCreditCard": true,
         "isMyOwn": true,
         "validThru": "1212",
-        "cvv2": "123"
+        "cvv2": "123",
+        "extraInfo" : {}
     },
     {
         "id": "123456789011",
@@ -13,7 +14,8 @@
         "isCreditCard": false,
         "isMyOwn": false,
         "validThru": "0921",
-        "cvv2": "124"
+        "cvv2": "124",
+        "extraInfo" : {}
     },
     {
         "id": "123456789013",
@@ -21,6 +23,7 @@
         "isCreditCard": false,
         "isMyOwn": true,
         "validThru": "1212",
-        "cvv2": "123"
+        "cvv2": "123",
+        "extraInfo" : {}
     }
 ]
